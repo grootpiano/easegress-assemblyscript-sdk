@@ -91,7 +91,7 @@ class AddHeaderAndSetBody extends Program {
 
 registerProgramFactory((params: Map<string, string>) => {
     return new AddHeaderAndSetBody(params)
-}
+})
 ```
 
 7. Build with this command
