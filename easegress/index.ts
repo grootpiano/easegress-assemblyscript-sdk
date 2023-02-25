@@ -31,7 +31,8 @@ class Program {
 	}
 }
 
-var programFactory: (params: Map<string, string>)=>Program
+var programFactory: (params: Map<string, string>)=>Program = (params)=>new Program(params)
+// var programFactory: (params: Map<string, string>) => Program
 
 function createProgram(params: Map<string, string>): Program {
 	return programFactory(params)
