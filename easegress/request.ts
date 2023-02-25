@@ -16,7 +16,7 @@
  */
 
 import {Cookie} from './cookie'
-import {pointer, marshalString, unmarshalString, marshalAllHeader, unmarshalAllHeader, marishalData, unmarshalData, marshalCookie, unmarshalCookie, unmarshalStringArray} from './marshal'
+import {pointer, marshalString, unmarshalString, marshalAllHeader, unmarshalAllHeader, marshalData, unmarshalData, marshalCookie, unmarshalCookie, unmarshalStringArray} from './marshal'
 
 @external("easegress", "host_req_get_real_ip") declare function host_req_get_real_ip(): pointer;
 export function getRealIp(): string {
@@ -194,6 +194,6 @@ export function getBody(): ArrayBuffer {
 
 @external("easegress", "host_req_set_body") declare function host_req_set_body(addr: pointer): void;
 export function setBody(body: ArrayBuffer): void {
-	let ptr = marishalData(body)
+	let ptr = marshalData(body)
 	host_req_set_body(ptr)
 }

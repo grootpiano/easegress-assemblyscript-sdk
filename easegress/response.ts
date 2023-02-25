@@ -16,7 +16,7 @@
  */
 
 import {Cookie} from './cookie'
-import {pointer, marshalString, unmarshalString, marshalAllHeader, unmarshalAllHeader, marishalData, unmarshalData, marshalCookie} from './marshal'
+import {pointer, marshalString, unmarshalString, marshalAllHeader, unmarshalAllHeader, marshalData, unmarshalData, marshalCookie} from './marshal'
 
 @external("easegress", "host_resp_get_status_code") declare function host_resp_get_status_code(): i32;
 export function getStatusCode(): i32 {
@@ -91,6 +91,6 @@ export function getBody(): ArrayBuffer {
 
 @external("easegress", "host_resp_set_body") declare function host_resp_set_body(addr: pointer): void;
 export function setBody(body: ArrayBuffer): void {
-	let ptr = marishalData(body)
+	let ptr = marshalData(body)
 	host_resp_set_body(ptr)
 }

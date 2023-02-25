@@ -9,7 +9,7 @@ This is the [AssemblyScript](https://www.assemblyscript.org/) SDK for [Easegress
 
 ## Prerequisites
 
-The following assumes that a recent version of [Git](https://git-scm.com/), [Node.js](https://nodejs.org/) and its package manager [npm](https://www.npmjs.com/) are installed. Basic knowledge about writing and working with TypeScript modules, which is very similar, is a plus.
+The following assumes that a recent version of [Git](https://git-scm.com/), [Node.js](https://nodejs.org/) and its package manager [npm](https://www.npmjs.com/) are installed. Basic knowledge about writing and working with TypeScript modules, which is very similar to AssemblyScript, is a plus.
 
 ## Local Development
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {pointer, marshalString, unmarshalString, marishalData, unmarshalData} from './marshal'
+import {pointer, marshalString, unmarshalString, marshalData, unmarshalData} from './marshal'
 
 
 @external("easegress", "host_cluster_get_binary") declare function host_cluster_get_binary(addr: pointer): pointer;
@@ -29,7 +29,7 @@ export function getBinary(key: string): ArrayBuffer {
 @external("easegress", "host_cluster_put_binary") declare function host_cluster_put_binary(keyAddr: pointer, valAddr: pointer): void;
 export function putBinary(key: string, val: ArrayBuffer): void {
 	let ptrKey = marshalString(key)
-	let ptrVal = marishalData(val)
+	let ptrVal = marshalData(val)
 	host_cluster_put_binary(ptrKey, ptrVal)
 }
 

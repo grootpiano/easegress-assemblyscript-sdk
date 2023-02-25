@@ -22,7 +22,7 @@ import {wasm_free} from './proxy'
 export type pointer = usize;
 
 
-export function marishalData(data: ArrayBuffer): pointer {
+export function marshalData(data: ArrayBuffer): pointer {
 	let buf = new ArrayBuffer(data.byteLength + sizeof<i32>())
 
 	let view = new DataView(buf)
