@@ -31,14 +31,16 @@ class Program {
 	}
 }
 
-var programFactory: (params: Map<string, string>)=>Program = (params)=>new Program(params)
-// var programFactory: (params: Map<string, string>) => Program
+type ProgramFactory = (params: Map<string, string>)=>Program
+
+var programFactory: ProgramFactory = (params)=>new Program(params)
+
 
 function createProgram(params: Map<string, string>): Program {
 	return programFactory(params)
 }
 
-function registerProgramFactory(factory: (params: Map<string, string>)=>Program): void {
+function registerProgramFactory(factory: ProgramFactory): void {
 	programFactory = factory
 }
 

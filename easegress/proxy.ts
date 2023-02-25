@@ -32,8 +32,7 @@ export function wasm_free(ptr: pointer): void {
 	__unpin(ptr);
 }
 
-var program: Program = new Program(new Map<string, string>())
-// var program: Program
+var program = new Program(new Map<string, string>())
 
 export function wasm_init(ptr: pointer): void {
 	let params = new Map<string, string>()
